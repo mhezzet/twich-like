@@ -1,18 +1,16 @@
 import React from 'react'
 import { Field, Form, Formik, ErrorMessage } from 'formik'
 import * as yup from 'yup'
-import { useStoreActions } from 'easy-peasy'
 
-export default function StreamForm() {
-  const createStream = useStoreActions(action => action.stream.addStream)
-
+export default function StreamForm({ type, onSubmit, initialValues }) {
   return (
     <Formik
-      initialValues={{ title: '', description: '' }}
+      enableReinitialize={true}
+      initialValues={
+        type === 'Update' ? initialValues : { title: '', description: '' }
+      }
       validationSchema={localSchema}
-      onSubmit={async (values, { setSubmitting, resetForm }) => {
-        await createStream(values)
-      }}
+      onSubmit={values => onSubmit(values)}
     >
       {({ isSubmitting }) => (
         <Form className='ui form error'>
@@ -40,7 +38,7 @@ export default function StreamForm() {
             type='submit'
             disabled={isSubmitting}
           >
-            create
+            {type}
           </button>
         </Form>
       )}

@@ -57,8 +57,9 @@ const fetchStream = thunk(async (actions, payload) => {
 })
 
 const updateStream = thunk(async (actions, payload) => {
-  const response = await streams.updateStream(payload.id, payload.stream)
+  const response = await streams.updateStream(payload.id, payload)
   actions.updatedStream(response.data)
+  history.push('/')
 })
 
 const deleteStream = thunk(async (actions, payload) => {

@@ -1,28 +1,16 @@
 {
   "streams": [
     {
-      "title": "new movie",
-      "description": "123123",
+      "title": "fist stream",
+      "description": "indeed",
+      "userId": 117154251701646804776,
+      "id": 0
+    },
+    {
+      "title": "2nd stream",
+      "description": "iam a good stream",
       "userId": "117154251701646804776",
       "id": 1
-    },
-    {
-      "title": "asdasd",
-      "description": "asdasd",
-      "userId": null,
-      "id": 2
-    },
-    {
-      "title": "new stream",
-      "description": "indeed",
-      "userId": "117154251701646804776",
-      "id": 3
-    },
-    {
-      "title": "asdas",
-      "description": "asdasd",
-      "userId": "117154251701646804776",
-      "id": 4
     }
   ]
 }

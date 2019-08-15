@@ -1,12 +1,12 @@
 {
-  "name": "api",
+  "name": "rtmp-server",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "json-server": "^0.15.0"
+    "node-media-server": "^2.1.2"
   },
   "scripts": {
-    "start": "json-server --host 0.0.0.0 -p 4141 -w db.json"
+    "start": "node index.js"
   }
 }
